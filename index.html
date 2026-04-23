@@ -146,10 +146,8 @@ body{background:var(--bg);color:#fff;font-family:'Tajawal',sans-serif;min-height
 
 .photo-card:hover{transform:translateY(-6px) scale(1.012);box-shadow:0 28px 60px rgba(0,0,0,.55),0 0 0 1px rgba(201,168,76,.3)}
 
-.photo-card img{width:100%;display:block;transition:transform .6s cubic-bezier(.2,.8,.2,1);aspect-ratio:4/3;object-fit:cover}
-.photo-card:first-child img{aspect-ratio:16/9}
-.photo-card:nth-child(2) img{aspect-ratio:3/4;height:100%;object-fit:cover}
-.photo-card:hover img{transform:scale(1.06)}
+.photo-card img{width:100%;height:auto;display:block;transition:transform .6s cubic-bezier(.2,.8,.2,1);object-fit:contain;background:#0a0a1a}
+.photo-card:hover img{transform:scale(1.03)}
 
 .photo-overlay{
   position:absolute;inset:0;
@@ -180,7 +178,7 @@ body{background:var(--bg);color:#fff;font-family:'Tajawal',sans-serif;min-height
   .photo-card,.photo-card:first-child,.photo-card:nth-child(2),
   .photo-card:nth-child(5),.photo-card:nth-child(6){grid-column:span 2}
   .photo-card:first-child{grid-column:span 2}
-  .photo-card:nth-child(2) img{aspect-ratio:4/3}
+  
 }
 @media(max-width:480px){
   .photo-grid{grid-template-columns:1fr;gap:.8rem}
@@ -343,8 +341,8 @@ body{background:var(--bg);color:#fff;font-family:'Tajawal',sans-serif;min-height
   .photo-card:nth-child(5),
   .photo-card:nth-child(6){grid-column:span 1;grid-row:span 1}
   .photo-card:first-child{grid-column:span 2}
-  .photo-card:first-child img{aspect-ratio:16/9}
-  .photo-card:nth-child(2) img,.photo-card img{aspect-ratio:4/3;height:auto}
+  
+  .photo-card img{height:auto}
 
   .msg-wrap{padding:3.5rem 2.5rem}
   .adm-card{padding:1.8rem 2rem}
@@ -382,7 +380,7 @@ body{background:var(--bg);color:#fff;font-family:'Tajawal',sans-serif;min-height
   .photo-card:nth-child(6){grid-column:span 1;grid-row:span 1}
   .photo-card img,
   .photo-card:first-child img,
-  .photo-card:nth-child(2) img{aspect-ratio:4/3;height:auto;object-fit:cover}
+  
 
   /* On mobile: always show overlay (no hover) */
   .photo-overlay{opacity:1;background:linear-gradient(to top,rgba(0,0,0,.7) 0%,transparent 55%)}
